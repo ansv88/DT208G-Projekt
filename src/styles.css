@@ -16,7 +16,6 @@ body {
 main {
     max-width: 1500px;
     margin: 0 auto;
-    /* padding-bottom: 5vh; */
 }
 
 h2 {
@@ -30,7 +29,6 @@ h2 {
 
     main {
         min-height: 92vh;
-        /* padding-bottom: 8vh; */
     }
       
 }

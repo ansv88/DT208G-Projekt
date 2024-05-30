@@ -11,5 +11,5 @@ import { FooterComponent } from './partials/footer/footer.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'University-courses';
+  title = 'Dalsjöns Universitet';
 }

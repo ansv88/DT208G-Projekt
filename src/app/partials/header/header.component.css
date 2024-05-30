@@ -1,8 +1,8 @@
 /* Huvudheader */
 #main-header {
-    background-color: #004080;
-    color: #fff;
-    border-bottom: 4px solid #ffcc00;
+    background-color: rgba(0, 64, 128, 1);
+    color: rgba(255, 255, 255, 1);
+    border-bottom: 4px solid rgba(255, 215, 0, 1);
     display: flex;
     flex-direction: column;
     padding: 10px 20px;
@@ -33,7 +33,7 @@
 
 .logo h1 a {
     text-decoration: none;
-    color: #fff;
+    color: rgba(255, 255, 255, 1);
 }
 
 /* Navigering */
@@ -58,7 +58,7 @@ nav {
 .bar {
     height: 3px;
     width: 100%;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 1);
     border-radius: 10px;
     transition: all 0.3s ease;
 }
@@ -79,7 +79,7 @@ nav {
 }
 
 .nav-list a {
-    color: #fff;
+    color: rgba(255, 255, 255, 1);
     text-decoration: underline;
     padding: 15px;
     font-size: 1.4em;
@@ -90,13 +90,9 @@ nav {
     cursor: pointer;
 }
 
-.nav-list a:hover {
-    color: #ffcc00;
-    text-decoration: none;
-}
-
+.nav-list a:hover,
 .nav-list a.current {
-    color: #ffcc00;
+    color: rgba(255, 215, 0, 1);
     text-decoration: none;
 }
 
@@ -104,7 +100,7 @@ nav {
 .mobile-menu {
     display: none;
     flex-direction: column;
-    background-color: #004080;
+    background-color: rgba(0, 64, 128, 1);
     width: 100%;
     position: absolute;
     top: 100%;
@@ -131,7 +127,7 @@ nav {
 }
 
 .mobile-menu a {
-    color: #fff;
+    color: rgba(255, 255, 255, 1);
     text-decoration: none;
 }
 
@@ -141,18 +137,18 @@ nav {
         padding: 10px 50px;
     }
 
+    /* Dölj hamburgarmenyn */
     .hamburger {
         display: none;
-        /* Dölj hamburgarmenyn */
     }
 
+    /* Visa navigationslistan som standard */
     .nav-list {
         display: flex;
-        /* Visa navigationslistan som standard */
     }
 
+    /* Dölj dropdown-menyn på desktop */
     .mobile-menu {
         display: none;
-        /* Dölj dropdown-menyn på desktop */
     }
 }

@@ -90,6 +90,11 @@
   text-align: center;
   margin: 20px;
   overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.info-box:hover {
+  transform: scale(1.03);
 }
 
 .info-box img {
@@ -113,12 +118,12 @@
   background-color: rgba(0, 64, 128, 1);
   color:  rgba(255, 255, 255, 1);
   padding: 10px;
-  text-decoration: none;
   margin: 20px 0;
 }
 
 .info-box .info-link:hover {
   background-color: rgba(0, 48, 96, 1);
+  text-decoration: none;
 }
 
 @media (min-width: 768px) {

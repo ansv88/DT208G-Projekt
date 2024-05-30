@@ -1,6 +1,6 @@
 #main-footer {
-    background-color: #004080;
-    color: #fff;
+    background-color: rgba(0, 64, 128, 1);
+    color: rgba(255, 255, 255, 1);
     padding: 30px 0;
     position: relative;
     z-index: 2;
@@ -25,13 +25,11 @@
     font-size: 1.2em;
     font-weight: 500;
     margin-bottom: 10px;
-    border-bottom: 2px solid #ffcc00;
+    border-bottom: 2px solid rgba(255, 204, 0, 1);
     padding-bottom: 5px;
 }
 
 .footer-section p, .footer-section ul, .footer-section form {
-    margin: 0;
-    padding: 0;
     list-style: none;
 }
 
@@ -44,37 +42,31 @@
 }
 
 .footer-section ul li a {
-    color: #fff;
+    color: rgba(255, 255, 255, 1);
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .footer-section ul li a:hover {
-    color: #ffcc00;
+    color: rgba(255, 215, 0, 1);
     cursor: pointer;
 }
 
 .footer-section .sub-menu {
-    margin-left: 20px;
-    margin-top: 5px;
-}
-
-.footer-section .sub-menu li {
-    margin-bottom: 5px; 
+    margin: 5px 20px;
 }
 
 .footer-section .social-media {
     display: flex;
     flex-direction: row;
-    
-}
+    }
 
 .footer-section .social-media li {
     margin: 10px;
 }
 
 .footer-section .social-media li a:hover {
-    background-color: #ffd700;
+    color: rgba(255, 215, 0, 1);
 }
 
 .footer-section form {
@@ -92,8 +84,8 @@
 
 .footer-section form button {
     padding: 10px;
-    background-color: #ffcc00;
-    color: #004080;
+    background-color: rgba(255, 204, 0, 1);
+    color: rgba(0, 64, 128, 1);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -101,13 +93,13 @@
 }
 
 .footer-section form button:hover {
-    background-color: #ffd700;
+    background-color: rgba(255, 215, 0, 1);
 }
 
 .footer-bottom {
     text-align: center;
     padding: 20px 0;
-    background-color: #003366;
+    background-color: rgba(0, 51, 102, 1);
 }
 
 .footer-bottom p {
@@ -120,5 +112,5 @@
   }
 
   #pic-attribute a {
-    color: #fff;
+    color: rgba(255, 255, 255, 1);
   }
