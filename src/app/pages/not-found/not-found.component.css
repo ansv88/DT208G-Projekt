@@ -1,0 +1,93 @@
+main {
+    position: relative;
+  }
+  
+  .hero {
+    background-image: url('../../../assets/images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-text {
+    max-width: 700px;
+
+  }
+  
+  .hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .hero-text p {
+    font-size: 1.2em;
+    margin: 0 auto 1em auto;
+  }
+  
+  .hero .hero-button {
+    display: flex;
+    justify-content: center;
+    background-color: #004080;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    margin: 10px auto;
+    width: 200px;
+  }
+  
+  .hero .hero-button:hover {
+    background-color: #003060;
+  }
+  
+  .info-section {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .error-message {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  .error-message h2 {
+    font-size: 1.8em;
+    margin: 10px 0;
+  }
+  
+  .error-message p {
+    padding: 0 20px;
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }  
+  
+  @media (min-width: 768px) {
+    .hero {
+      height: 400px;
+    }
+  
+    .hero h1 {
+      font-size: 3em;
+    }
+  
+    .error-message {
+      max-width: 800px;
+    }
+  }
+  

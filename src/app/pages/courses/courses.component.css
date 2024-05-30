@@ -1,0 +1,242 @@
+h2 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+}
+
+article {
+  margin-top: 20px;
+  text-align: center;
+  line-height: 1.8em;
+  font-size: 1.2em;
+  padding: 0 20px;
+}
+
+article p {
+  margin-bottom: 20px;
+}
+
+span {
+  margin-right: 5px;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0px;
+  margin: 50px 5px;
+}
+
+form[role="search"] {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+input[type="search"] {
+  width: 100%;
+  padding: 10px 0px;
+  font-size: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* .search-form select {
+  width: 100%;
+  padding: 10px 0 10px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+} */
+
+:host ::ng-deep .p-dropdown,
+:host ::ng-deep .p-multiselect {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+:host ::ng-deep .p-multiselect-header {
+  display: none; /* Dölj sökfältet och header */
+}
+
+:host ::ng-deep .p-multiselect-items .p-checkbox {
+  display: none; /* Dölj checkboxar */
+}
+
+:host ::ng-deep .p-multiselect-item,
+:host ::ng-deep .p-dropdown-item {
+  padding: 10px 0 10px 10px;
+}
+
+.sort-form-mobile {
+  margin-bottom: 20px;
+}
+
+.search-form label,
+.sort-form-mobile label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+:host ::ng-deep .p-paginator {
+  margin-top: 20px;
+}
+
+td button {
+  width: 100px;
+  padding: 10px 15px;
+  background-color: #2a6cae;
+  color: #fff;
+  font-size: 0.9em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+td button:hover {
+  cursor: pointer;
+}
+
+/* Mobile-first approach */
+.table-desktop {
+  display: none;
+}
+
+.table-mobile .mobile-course {
+  border: 1px solid #989898;
+  border-radius: 4px;
+  padding: 15px 5px;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.course-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.article-desktop {
+  display: none;
+}
+
+.article-mobile {
+  display: block;
+}
+
+.course-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+  text-align: center;
+}
+
+/* Centrerar tomma meddelanden i tabellen */
+td[colspan="6"] {
+  text-align: center;
+  font-size: 1.2em;
+  padding: 30px 0;
+}
+
+@media (min-width: 768px) {
+  .table-desktop {
+    display: block;
+  }
+
+  .table-mobile {
+    display: none;
+  }
+
+  .article-desktop {
+    display: block;
+  }
+
+  .article-mobile {
+    display: none;
+  }
+
+  th,
+  td {
+    padding: 12px;
+  }
+
+  table {
+    font-size: 18px;
+  }
+
+  .card {
+    margin: 50px 40px;
+    padding: 20px;
+  }
+
+  form[role="search"] {
+    margin: 30px 0 40px 0;
+  }
+
+  .search-form {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  input[type="search"] {
+    width: 40%;
+    margin-bottom: 0;
+    font-size: 18px;
+  }
+
+  :host ::ng-deep .p-multiselect {
+    width: 200%;
+  }
+
+  /* input[type="search"] {
+    width: 100%;
+    padding: 10px 0px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    text-align: center;
+  } */
+
+  .search-form label {
+    display: none;
+  }
+
+  table {
+    margin: 20px 0;
+  }
+
+  .sort-form-mobile {
+    display: none;
+  }
+
+}

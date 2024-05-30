@@ -1,0 +1,151 @@
+<h2>Alla kurser</h2>
+<article class="article-mobile">
+  <p>Se vårt kursutbud och sätt ihop ditt eget ramschema.</p>
+  <p>
+    Tryck på <span></span><i class="fa-solid fa-plus fa-l"></i><span></span> för
+    att lägga till en kurs till ditt ramschema.
+  </p>
+  <p>
+    <a routerLink="/courses" routerLinkActive="current"
+      >Se ditt ramchema här.</a
+    >
+  </p>
+</article>
+
+<article class="article-desktop">
+  <p>Se vårt kursutbud och sätt ihop ditt eget ramschema.</p>
+  <p>
+    Tryck på lägg till-knappen för att lägga till en kurs till ditt ramschema.
+  </p>
+  <p>
+    <a routerLink="/courses" routerLinkActive="current"
+      >Se ditt ramchema här.</a
+    >
+  </p>
+</article>
+
+<div class="card">
+  <form role="search" class="search-form">
+    <input
+      type="search"
+      name="q"
+      placeholder="Sök efter kurskod eller kursnamn"
+      aria-label="Sök efter kurskod eller kursnamn"
+      [(ngModel)]="filterValue"
+      (input)="filterCourses()"
+    />
+    <label for="subjectSelect">Hitta kurser efter ämne:</label>
+    <p-multiSelect
+      name="subjectSelect"
+      [options]="subjectOptions"
+      [(ngModel)]="selectedSubjects"
+      placeholder="Alla ämnen"
+      (onChange)="filterCourses()"
+    ></p-multiSelect>
+  </form>
+
+  <!-- Sorteringsdropdown för mobilvyn -->
+  <div class="sort-form-mobile">
+    <label for="sortSelect">Sortera efter:</label>
+    <p-dropdown
+      [options]="sortOptions"
+      [(ngModel)]="selectedSortOption"
+      (onChange)="sortCourses($event.value)"
+      placeholder="Välj sortering"
+      [style]="{ width: '100%' }"
+    ></p-dropdown>
+  </div>
+
+  <!-- Tabell desktop -->
+  <div class="table-desktop">
+    <p-table
+      styleClass="p-datatable-striped"
+      [value]="filteredCourses"
+      [tableStyle]="{ 'min-width': '60rem' }"
+      [rows]="rows"
+      [paginator]="true"
+      [totalRecords]="filteredCourses.length"
+      (onPage)="onPageChange($event)"
+      [rowsPerPageOptions]="[25, 50, 100]"
+      [showCurrentPageReport]="true"
+      currentPageReportTemplate="Visar {first} till {last} av {totalRecords} kurser"
+    >
+      <ng-template pTemplate="header">
+        <tr>
+          <th pSortableColumn="courseCode" style="width: 20%">
+            Kurskod <p-sortIcon field="courseCode"></p-sortIcon>
+          </th>
+          <th pSortableColumn="courseName" style="width: 20%">
+            Namn <p-sortIcon field="courseName"></p-sortIcon>
+          </th>
+          <th pSortableColumn="points" style="width: 20%">
+            Poäng <p-sortIcon field="points"></p-sortIcon>
+          </th>
+          <th pSortableColumn="subject" style="width: 20%">
+            Ämne <p-sortIcon field="subject"></p-sortIcon>
+          </th>
+          <th style="width: 20%">Kursplan</th>
+          <th style="width: 10%"></th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-course>
+        <tr>
+          <td>{{ course.courseCode }}</td>
+          <td>{{ course.courseName }}</td>
+          <td>{{ course.points }}</td>
+          <td>{{ course.subject }}</td>
+          <td><a [href]="course.syllabus">Kursplan</a></td>
+          <td>
+            <button
+              (click)="addCourse(course)"
+              [disabled]="isCourseAdded(course.courseCode)"
+            >
+              {{ isCourseAdded(course.courseCode) ? "Tillagd" : "Lägg till" }}
+            </button>
+          </td>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="emptymessage">
+        <tr>
+          <td colspan="6">Inga kurser hittades.</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+
+  <!-- Tabell mobil -->
+  <div class="table-mobile">
+    <p-table
+      [value]="filteredCourses"
+      [rows]="rows"
+      [paginator]="true"
+      [totalRecords]="filteredCourses.length"
+      (onPage)="onPageChange($event)"
+      [rowsPerPageOptions]="[25, 50, 100]"
+      [showCurrentPageReport]="true"
+      currentPageReportTemplate="Visar {first} till {last} av {totalRecords} kurser"
+    >
+      <ng-template pTemplate="body" let-course>
+        <tr class="mobile-course">
+          <td colspan="6">
+            <div class="course-header">
+              <div class="course-name">{{ course.courseName }}</div>
+              <div class="course-points">{{ course.points }} poäng</div>
+              <i (click)="addCourse(course)" class="fa-solid fa-plus fa-l"></i>
+            </div>
+            <div class="course-details">
+              <div class="course-code">{{ course.courseCode }}</div>
+              <div class="course-subject">{{ course.subject }}</div>
+              <a [href]="course.syllabus">Kursplan</a>
+            </div>
+          </td>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="emptymessage">
+        <tr>
+          <td colspan="6">Inga kurser hittades.</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>

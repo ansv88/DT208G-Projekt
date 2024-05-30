@@ -1,0 +1,28 @@
+<header id="main-header">
+    <div class="container">
+        <div class="logo">
+        <img class="logopic" src="../../../assets/images/logo-no-background.svg" alt="Logga Dalsjöns Universitet">
+        <h1><a routerLink="/home">Dalsjöns universitet</a></h1>
+    </div>
+        <nav>
+            <div class="hamburger" (click)="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a routerLink="/home" routerLinkActive="current">Startsidan</a></li>
+                <li><a routerLink="/courses" routerLinkActive="current">Kurser</a></li>
+                <li><a routerLink="/my-schedule" routerLinkActive="current">Mitt ramschema</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- Dropdown-menyn för mobilvy -->
+    <nav class="mobile-menu" [class.show-menu]="menuActive">
+        <ul>
+            <li><a routerLink="/home" routerLinkActive="current" (click)="toggleMenu()">Startsidan</a></li>
+            <li><a routerLink="/courses" routerLinkActive="current" (click)="toggleMenu()">Kurser</a></li>
+            <li><a routerLink="/my-schedule" routerLinkActive="current" (click)="toggleMenu()">Mitt ramschema</a></li>
+        </ul>
+    </nav>
+</header>

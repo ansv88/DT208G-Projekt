@@ -1,0 +1,158 @@
+/* Huvudheader */
+#main-header {
+    background-color: #004080;
+    color: #fff;
+    border-bottom: 4px solid #ffcc00;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Container för att centrera innehållet */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Logotypen */
+.logopic {
+    height: 50px;
+    margin-right: 15px;
+}
+
+.logo {
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+}
+
+.logo h1 a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Navigering */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Hamburgerikon */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    gap: 5px;
+    margin-left: auto;
+    z-index: 3;
+}
+
+.bar {
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    display: none;
+    flex-direction: row;
+}
+
+.nav-list li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list a {
+    color: #fff;
+    text-decoration: underline;
+    padding: 15px;
+    font-size: 1.4em;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.nav-list a:hover {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+.nav-list a.current {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+/* Dropdown-menyn för mobilvy */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #004080;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    padding-top: 10px;
+    font-size: 1.5em;
+}
+
+.mobile-menu.show-menu {
+    display: flex;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.mobile-menu li {
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.mobile-menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* För större skärmar */
+@media (min-width: 768px) {
+    #main-header {
+        padding: 10px 50px;
+    }
+
+    .hamburger {
+        display: none;
+        /* Dölj hamburgarmenyn */
+    }
+
+    .nav-list {
+        display: flex;
+        /* Visa navigationslistan som standard */
+    }
+
+    .mobile-menu {
+        display: none;
+        /* Dölj dropdown-menyn på desktop */
+    }
+}
