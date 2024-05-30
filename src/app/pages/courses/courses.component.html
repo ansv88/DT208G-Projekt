@@ -66,7 +66,7 @@
       [paginator]="true"
       [totalRecords]="filteredCourses.length"
       (onPage)="onPageChange($event)"
-      [rowsPerPageOptions]="[25, 50, 100]"
+      [rowsPerPageOptions]="[10, 25, 50]"
       [showCurrentPageReport]="true"
       currentPageReportTemplate="Visar {first} till {last} av {totalRecords} kurser"
     >
@@ -121,7 +121,7 @@
       [paginator]="true"
       [totalRecords]="filteredCourses.length"
       (onPage)="onPageChange($event)"
-      [rowsPerPageOptions]="[25, 50, 100]"
+      [rowsPerPageOptions]="[10, 25, 50]"
       [showCurrentPageReport]="true"
       currentPageReportTemplate="Visar {first} till {last} av {totalRecords} kurser"
     >

@@ -20,8 +20,8 @@ span {
 }
 
 .card {
-  background-color: white;
-  border: 1px solid #ccc;
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(204, 204, 204, 1);
   border-radius: 4px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   padding: 0px;
@@ -37,7 +37,7 @@ input[type="search"] {
   width: 100%;
   padding: 10px 0px;
   font-size: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid rgba(204, 204, 204, 1);
   border-radius: 4px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 15px;
@@ -55,13 +55,13 @@ input[type="search"] {
   width: 100%;
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid rgba(204, 204, 204, 1);
   border-radius: 4px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 :host ::ng-deep .p-multiselect-header {
-  display: none; /* Dölj sökfältet och header PrimeNG-komponent */
+  display: none; /* Dölj sökfältet och header från PrimeNG-komponent */
 }
 
 :host ::ng-deep .p-multiselect-items .p-checkbox {
@@ -93,16 +93,17 @@ input[type="search"] {
 td button {
   width: 100px;
   padding: 10px 15px;
-  background-color: #2a6cae;
-  color: #fff;
+  background-color: rgba(42, 108, 174, 1);
+  color: rgba(255, 255, 255, 1);
   font-size: 0.9em;
-  border: 1px solid #ccc;
+  border: 1px solid rgba(204, 204, 204, 1);
   border-radius: 4px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-td button:hover {
+tr td button:hover {
   cursor: pointer;
+  background-color: rgba(0, 48, 96, 1);
 }
 
 .table-desktop {
@@ -110,7 +111,7 @@ td button:hover {
 }
 
 .table-mobile .mobile-course {
-  border: 1px solid #989898;
+  border: 1px solid rgba(152, 152, 152, 1);
   border-radius: 4px;
   padding: 15px 5px;
   margin-bottom: 20px;
@@ -141,7 +142,7 @@ td button:hover {
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid rgba(204, 204, 204, 1);
   padding-top: 10px;
   text-align: center;
 }

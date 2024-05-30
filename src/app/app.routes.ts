@@ -6,9 +6,9 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 export const routes: Routes = [
     { path: "home", component: HomeComponent, title:"Dalsjöns Universitet" },
-    { path: "courses", component: CoursesComponent, title:"DU - kurser" },
-    { path: "my-schedule", component: MyScheduleComponent, title:"DU - ramschema" },
+    { path: "courses", component: CoursesComponent, title:"Dalsjöns Universitet | Kurser" },
+    { path: "my-schedule", component: MyScheduleComponent, title:"Dalsjöns Universitet | Ramschema" },
     { path: "", redirectTo: "home", pathMatch: "full" },
-    {path: '404', component: NotFoundComponent, title:"DU - 404"},
+    {path: '404', component: NotFoundComponent, title:"Dalsjöns Universitet | 404"},
     {path: '**', component: NotFoundComponent},
 ];

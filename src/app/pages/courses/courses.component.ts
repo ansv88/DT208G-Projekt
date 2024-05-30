@@ -42,7 +42,7 @@ export class CoursesComponent implements OnInit {
   sortAscending: boolean = true; //Default sorteringsordning
   addedCourses: Set<string> = new Set<string>(); //Set för att hålla reda på tillagda kurser
   first = 0; //För pagineringen
-  rows = 25; //För pagineringen
+  rows = 10; //För pagineringen
 
   //Definierar alternativ för sortering (mobilvy)
   sortOptions = [
@@ -80,7 +80,7 @@ export class CoursesComponent implements OnInit {
         label: subject,
         value: subject,
       }));
-      this.selectedSubjects = []; // Se till att "Alla ämnen" är valt som standard
+      this.selectedSubjects = []; //Se till att "Alla ämnen" är valt som standard
 
       //Ladda tillagda kurser från MyScheduleService
       const addedCourses = this.myScheduleService.getCourses();
