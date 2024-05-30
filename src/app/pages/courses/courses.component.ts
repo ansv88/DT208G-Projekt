@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CoursesService } from '../../services/courses.service';
@@ -56,14 +56,17 @@ export class CoursesComponent implements OnInit {
   ];
   selectedSortOption: any | null = this.sortOptions[0].value;
 
-  //Injekterar CoursesService och MyScheduleService för att hämta kursdata och hantera ramschemat
+  //Injekterar CoursesService och MyScheduleService för att hämta kursdata, hantera ramschemat och scroll till toppen vid nav
   constructor(
     private coursesService: CoursesService,
-    private myScheduleService: MyScheduleService
+    private myScheduleService: MyScheduleService,
+    private viewportScroller: ViewportScroller
   ) {}
 
   //Initierar komponenten och hämtar kurser
   ngOnInit() {
+    this.viewportScroller.scrollToPosition([0, 0]); //Vid navigering till sidan, navigera till toppen
+
     this.coursesService.getCourses().subscribe((courses) => {
       this.courses = courses;
       this.filteredCourses = courses;

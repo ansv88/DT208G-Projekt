@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MyScheduleService } from '../../services/my-schedule.service';
 import { Course } from '../../models/course';
-import { CommonModule } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
 import { TableModule } from 'primeng/table';
 
 @Component({
@@ -16,9 +16,10 @@ export class MyScheduleComponent implements OnInit {
   myCourses: Course[] = []; //Array som sedan ska ta hand om kurserna i ramschemat
   totalPoints: number = 0; //Variabel för totala kurspoängen
 
-  constructor(private myScheduleService: MyScheduleService) {}
+  constructor(private myScheduleService: MyScheduleService, private viewportScroller: ViewportScroller) {}
 
   ngOnInit() {
+    this.viewportScroller.scrollToPosition([0, 0]);  //Vid navigering till sidan, navigera till toppen
     this.loadCourses(); //Laddar kurserna när sidan(komponenten) laddas
   }
 

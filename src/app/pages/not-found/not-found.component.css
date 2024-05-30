@@ -2,92 +2,77 @@ main {
     position: relative;
   }
   
-  .hero {
-    background-image: url('../../../assets/images/hero.jpg');
+  .hero-404 {
+    background-image: url('../../../assets/images/hero.webp');
     background-size: cover;
     background-position: center;
-    color: white;
+    color: rgba(255, 255, 255, 1);
     text-align: center;
-    padding: 100px 20px;
-    height: 300px;
+    padding: 200px 20px 100px 20px;
+    height: 600px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
   
-  .hero-text {
-    max-width: 700px;
-
-  }
-  
-  .hero h1 {
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
-    font-weight: 600;
-    text-align: center;
-  }
-  
-  .hero-text p {
-    font-size: 1.2em;
-    margin: 0 auto 1em auto;
-  }
-  
-  .hero .hero-button {
-    display: flex;
-    justify-content: center;
-    background-color: #004080;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1em;
-    margin: 10px auto;
-    width: 200px;
-  }
-  
-  .hero .hero-button:hover {
-    background-color: #003060;
-  }
-  
-  .info-section {
-    display: flex;
-    justify-content: center;
-    padding: 50px 20px;
-    background-color: #f4f4f4;
-  }
-  
   .error-message {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
+    color:  rgba(0, 64, 128, 1);
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     max-width: 600px;
     text-align: center;
-    margin: 20px;
-    padding: 20px;
+    margin: 10px;
+    padding: 10px;
   }
   
   .error-message h2 {
-    font-size: 1.8em;
+    font-size: 1.6em;
     margin: 10px 0;
   }
   
   .error-message p {
-    padding: 0 20px;
-    font-size: 1.2em;
-    line-height: 1.5em;
+    font-size: 1.1em;
+    line-height: 1.3em;
   }  
   
-  @media (min-width: 768px) {
-    .hero {
-      height: 400px;
-    }
+  /* Knapp */
+  .hero-404 .hero-button {
+    display: flex;
+    justify-content: center;
+    background-color:  rgba(0, 64, 128, 1);
+    color: rgba(255, 255, 255, 1);
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    margin: 15px auto;
+    width: 200px;
+  }
   
-    .hero h1 {
-      font-size: 3em;
+  .hero-404 .hero-button:hover {
+    background-color: rgba(0, 48, 96, 1);
+  }
+
+  @media (min-width: 768px) {
+    .hero-404 {
+      height: 600px;
     }
   
     .error-message {
       max-width: 800px;
+    }
+
+    .error-message h2 {
+      font-size: 1.6em;
+      margin: 10px 0;
+    }
+
+    .error-message p {
+      padding: 0 20px;
+      font-size: 1.2em;
+      line-height: 1.5em;
     }
   }
   

@@ -1,11 +1,13 @@
+
+/* Hero-section */
 .hero {
-  background-image: url('../../../assets/images/hero.jpg');
+  background-image: url('../../../assets/images/hero.webp');
   background-size: cover;
   background-position: center;
-  color: white;
+  color: rgba(255, 255, 255, 1);
   text-align: center;
   padding: 5px;
-  height: 500px;
+  height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,48 +27,23 @@
   }
 
 .hero h1 {
+  padding: 0 10px;
+  background-color: rgba(0, 64, 128, 0.7);
   font-size: 2.7em;
   font-weight: 500;
   text-align: left;
   margin-top: 4.5em;
-  -webkit-text-stroke: 1px #000;
-}
-
-.hero-text p {
-  font-size: 1.2em;
-  margin: 0 auto 1em auto;
-  background-color: #fff;
-  color: #004080;
-  width: 250px;
-  padding: 20px;
-  border-radius: 4px;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 1);
 }
 
 .hero .hero-news {
-  background-color: #fff;
-  color: #004080;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 64, 128, 1);
   width: 300px;
   padding: 10px;
   border-radius: 4px;
   line-height: 1.5em;
   margin-top: 20px;
-}
-
-.hero .hero-button {
-  display: flex;
-  justify-content: center;
-  width: 135px;
-  background-color: #004080;
-  color: white;
-  padding: 10px 5px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 1em;
-  margin: 10px auto;
-}
-
-.hero .hero-button:hover {
-  background-color: #003060;
 }
 
 .hero-news h3 {
@@ -78,6 +55,25 @@
   font-size: 1.2em;
 }
 
+/* Knappar hero */
+.hero .hero-button {
+  display: flex;
+  justify-content: center;
+  width: 140px;
+  background-color: rgba(0, 64, 128, 1);
+  color: rgba(255, 255, 255, 1);
+  padding: 10px 5px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1em;
+  margin: 10px auto;
+}
+
+.hero .hero-button:hover {
+  background-color: rgba(0, 48, 96, 1);
+}
+
+/* Info-section */
 .info-sections {
   display: flex;
   flex-direction: column;
@@ -87,7 +83,7 @@
 }
 
 .info-box {
-  background-color: white;
+  background-color:  rgba(255, 255, 255, 1);
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   max-width: 400px;
@@ -111,17 +107,18 @@
   line-height: 1.4em;
 }
 
+/* Knappar info */
 .info-box .info-link {
   display: block;
-  background-color: #004080;
-  color: white;
+  background-color: rgba(0, 64, 128, 1);
+  color:  rgba(255, 255, 255, 1);
   padding: 10px;
   text-decoration: none;
   margin: 20px 0;
 }
 
 .info-box .info-link:hover {
-  background-color: #003060;
+  background-color: rgba(0, 48, 96, 1);
 }
 
 @media (min-width: 768px) {
@@ -133,16 +130,16 @@
     flex-direction: row;
   }
 
+  .hero-text {
+    margin-left: 8vw;
+    }
+
   .hero h1 {
     margin-top: 1vh;
     font-size: 3.5em;
     margin-bottom: 0.5em;
     font-weight: 600;
   }
-
-  .hero-text {
-    margin-left: 8vw;
-    }
 
   .hero .hero-news {
     padding: 20px 20px;

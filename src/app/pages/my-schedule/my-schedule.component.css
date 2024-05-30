@@ -15,6 +15,11 @@ article p {
     margin-bottom: 20px;
 }
 
+.article-desktop {
+    max-width: 800px;
+    margin: 10px auto;
+}
+
 span {
     margin-right: 10px;
 }
@@ -28,14 +33,14 @@ span {
     margin: 50px 5px;
 }
 
-.clearBtn {
+.clearAllBtnContainer {
     display: flex;
     justify-content: center;
     width: 100%;
     margin: 20px 0;
 }
 
-button.clear {
+button.clearAll {
     width: 150px;
     padding: 10px 15px;
     background-color: #ee694c;
@@ -61,7 +66,6 @@ td button:hover {
     cursor: pointer;
 }
 
-/* Mobile-first approach */
 .table-desktop {
     display: none;
 }
@@ -103,7 +107,7 @@ td button:hover {
     text-align: center;
 }
 
-/* Centrerar tomma meddelanden i tabellen */
+/* Centrerar meddelande för Inga kurser hittades i tabellen */
 td[colspan="6"] {
     text-align: center;
     font-size: 1.2em;
@@ -112,9 +116,8 @@ td[colspan="6"] {
 
 .total-points {
     text-align: center;
-    margin-top: 20px;
-    margin-right: 10px;
     font-size: 1.1em;
+    margin: 20px 10px 30px 10px;
 }
 
 @media (min-width: 768px) {
@@ -145,11 +148,18 @@ td[colspan="6"] {
 
     .card {
         margin: 50px 40px;
-        padding: 20px;
+        padding: 20px 20px 0 20px;
     }
 
     table {
         margin: 20px 0;
+    }
+
+    .total-points {
+        text-align: center;
+        margin-top: 20px;
+        margin-right: 10px;
+        font-size: 1.1em;
     }
 
 }

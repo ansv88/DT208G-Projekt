@@ -50,15 +50,6 @@ input[type="search"] {
   gap: 10px;
 }
 
-/* .search-form select {
-  width: 100%;
-  padding: 10px 0 10px 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-} */
-
 :host ::ng-deep .p-dropdown,
 :host ::ng-deep .p-multiselect {
   width: 100%;
@@ -70,11 +61,11 @@ input[type="search"] {
 }
 
 :host ::ng-deep .p-multiselect-header {
-  display: none; /* Dölj sökfältet och header */
+  display: none; /* Dölj sökfältet och header PrimeNG-komponent */
 }
 
 :host ::ng-deep .p-multiselect-items .p-checkbox {
-  display: none; /* Dölj checkboxar */
+  display: none; /* Dölj checkboxar från PrimeNG-komponent */
 }
 
 :host ::ng-deep .p-multiselect-item,
@@ -114,7 +105,6 @@ td button:hover {
   cursor: pointer;
 }
 
-/* Mobile-first approach */
 .table-desktop {
   display: none;
 }
@@ -156,7 +146,6 @@ td button:hover {
   text-align: center;
 }
 
-/* Centrerar tomma meddelanden i tabellen */
 td[colspan="6"] {
   text-align: center;
   font-size: 1.2em;
@@ -215,17 +204,6 @@ td[colspan="6"] {
   :host ::ng-deep .p-multiselect {
     width: 200%;
   }
-
-  /* input[type="search"] {
-    width: 100%;
-    padding: 10px 0px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 15px;
-    text-align: center;
-  } */
 
   .search-form label {
     display: none;
