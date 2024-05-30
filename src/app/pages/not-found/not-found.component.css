@@ -3,7 +3,7 @@ main {
   }
   
   .hero-404 {
-    background-image: url('../../../assets/images/hero.webp');
+    background-image: url('../../../assets/images/hero1.webp');
     background-size: cover;
     background-position: center;
     color: rgba(255, 255, 255, 1);
