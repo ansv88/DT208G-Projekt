@@ -29,8 +29,11 @@
     padding-bottom: 5px;
 }
 
-.footer-section p, .footer-section ul, .footer-section form {
+.footer-section p,
+.footer-section ul,
+.footer-section form {
     list-style: none;
+    line-height: 1.5em;
 }
 
 .footer-section ul {
