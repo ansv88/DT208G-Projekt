@@ -10,7 +10,6 @@ import { PaginatorModule } from 'primeng/paginator';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { DropdownModule } from 'primeng/dropdown';
 import { MyScheduleService } from '../../services/my-schedule.service';
-import { MultiSelectModule } from 'primeng/multiselect';
 
 @Component({
   selector: 'app-courses',
@@ -24,8 +23,7 @@ import { MultiSelectModule } from 'primeng/multiselect';
     PaginatorModule,
     RouterLink,
     RouterLinkActive,
-    DropdownModule,
-    MultiSelectModule,
+    DropdownModule
   ],
   templateUrl: './courses.component.html',
   styleUrls: ['./courses.component.css'],
@@ -36,7 +34,7 @@ export class CoursesComponent implements OnInit {
   filteredCourses: Course[] = [];
   filterValue: string = '';
   subjects: string[] = [];
-  selectedSubjects: string[] = [];
+  selectedSubject: string = '';
   subjectOptions: any[] = [];
   sortColumn: keyof Course | null = null; //Ingen initial sortering
   sortAscending: boolean = true; //Default sorteringsordning
@@ -46,7 +44,7 @@ export class CoursesComponent implements OnInit {
 
   //Definierar alternativ för sortering (mobilvy)
   sortOptions = [
-    { label: 'Välj sortering', value: null },
+    { label: 'Välj sortering', value: 'courseCode-asc'},
     { label: 'Kurskod stigande', value: 'courseCode-asc' },
     { label: 'Kurskod fallande', value: 'courseCode-desc' },
     { label: 'Kursnamn stigande', value: 'courseName-asc' },
@@ -76,11 +74,11 @@ export class CoursesComponent implements OnInit {
         new Set(courses.map((course) => course.subject))
       );
 
-      this.subjectOptions = this.subjects.map((subject) => ({
+      this.subjectOptions = [{ label: 'Alla ämnen', value: '' }, ...this.subjects.map((subject) => ({  //Lägger till "Allaämnen" som ett återställningsval i dropdownen
         label: subject,
         value: subject,
-      }));
-      this.selectedSubjects = []; //Se till att "Alla ämnen" är valt som standard
+      }))];
+      this.selectedSubject = ''; // Se till att "Alla ämnen" är valt som standard
 
       //Ladda tillagda kurser från MyScheduleService
       const addedCourses = this.myScheduleService.getCourses();
@@ -97,8 +95,7 @@ export class CoursesComponent implements OnInit {
       (course) =>
         (course.courseCode.toLowerCase().includes(filterValueLower) ||
           course.courseName.toLowerCase().includes(filterValueLower)) &&
-        (this.selectedSubjects.length === 0 ||
-          this.selectedSubjects.includes(course.subject))
+          (this.selectedSubject === '' || course.subject === this.selectedSubject)
     );
     this.applySort(); //Använd sortering efter filtrering
     this.first = 0; //Återställ paginering till första sidan

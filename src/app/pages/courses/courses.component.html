@@ -29,13 +29,13 @@
       (input)="filterCourses()"
     />
     <label for="subjectSelect">Hitta kurser efter ämne:</label>
-    <p-multiSelect
+    <p-dropdown
       name="subjectSelect"
       [options]="subjectOptions"
-      [(ngModel)]="selectedSubjects"
+      [(ngModel)]="selectedSubject"
       placeholder="Alla ämnen"
       (onChange)="filterCourses()"
-    ></p-multiSelect>
+    ></p-dropdown>
   </form>
 
   <!-- Sorteringsdropdown för mobilvyn -->

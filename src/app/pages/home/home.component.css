@@ -1,7 +1,7 @@
 
 /* Hero-section */
 .hero {
-  background-image: url('../../../assets/images/hero1.webp');
+  background-image: url('../../../assets/images/hero.webp');
   background-size: cover;
   background-position: center;
   color: rgba(255, 255, 255, 1);
@@ -79,7 +79,7 @@
   flex-direction: column;
   justify-content: space-around;
   padding: 50px 20px;
-  background-color: #f4f4f4;
+  background-color: rgba(244, 244, 244, 1);
 }
 
 .info-box {
