@@ -125,22 +125,25 @@
       [showCurrentPageReport]="true"
       currentPageReportTemplate="Visar {first} till {last} av {totalRecords} kurser"
     >
-      <ng-template pTemplate="body" let-course>
-        <tr class="mobile-course">
-          <td colspan="6">
-            <div class="course-header">
-              <div class="course-name">{{ course.courseName }}</div>
-              <div class="course-points">{{ course.points }} poäng</div>
-              <i (click)="addCourse(course)" class="fa-solid fa-plus fa-l"></i>
-            </div>
-            <div class="course-details">
-              <div class="course-code">{{ course.courseCode }}</div>
-              <div class="course-subject">{{ course.subject }}</div>
-              <a [href]="course.syllabus">Kursplan</a>
-            </div>
-          </td>
-        </tr>
-      </ng-template>
+    <ng-template pTemplate="body" let-course>
+      <tr class="mobile-course">
+        <td colspan="6">
+          <div class="course-header">
+            <div class="course-name">{{ course.courseName }}</div>
+            <div class="course-points">{{ course.points }} poäng</div>
+            <span (click)="addCourse(course)">
+              <i *ngIf="isCourseAdded(course.courseCode)" class="fa fa-check"></i>
+              <i *ngIf="!isCourseAdded(course.courseCode)" class="fa fa-plus"></i>
+            </span>
+          </div>
+          <div class="course-details">
+            <div class="course-code">{{ course.courseCode }}</div>
+            <div class="course-subject">{{ course.subject }}</div>
+            <a [href]="course.syllabus">Kursplan</a>
+          </div>
+        </td>
+      </tr>
+    </ng-template>
       <ng-template pTemplate="emptymessage">
         <tr>
           <td colspan="6">Inga kurser hittades.</td>

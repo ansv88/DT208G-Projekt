@@ -106,8 +106,10 @@ export class CoursesComponent implements OnInit {
 
   //Lägg till kurs i ramschemat
   addCourse(course: Course): void {
-    this.myScheduleService.addCourse(course); //Använd MyScheduleService för att lägga till kurs
-    this.addedCourses.add(course.courseCode); // Lägg till kurskoden(id:et) till setet av tillagda kurser
+    if (!this.isCourseAdded(course.courseCode)) { //Kontrollera om kursen redan är tillagd
+      this.myScheduleService.addCourse(course); //Använd MyScheduleService för att lägga till kurs
+      this.addedCourses.add(course.courseCode); //Lägg till kurskoden(id:et) till setet av tillagda kurser
+    }
   }
 
   //Kontrollera om en kurs har lagts till
