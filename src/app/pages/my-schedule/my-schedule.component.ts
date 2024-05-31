@@ -3,11 +3,12 @@ import { MyScheduleService } from '../../services/my-schedule.service';
 import { Course } from '../../models/course';
 import { CommonModule, ViewportScroller } from '@angular/common';
 import { TableModule } from 'primeng/table';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-my-schedule',
   standalone: true,
-  imports: [CommonModule, TableModule],
+  imports: [CommonModule, TableModule, RouterLink],
   templateUrl: './my-schedule.component.html',
   styleUrl: './my-schedule.component.css'
 })

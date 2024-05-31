@@ -1,14 +1,24 @@
 <h2>Mitt Ramschema</h2>
 
 <article class="article-mobile">
-  <p>Här kan du se och hantera ditt ramschema. Tryck på<span></span><i class="fa-solid fa-trash"></i>-ikonen för att ta bort en kurs från ditt ramschema.</p>
+  <p class="firstP">Här kan du se och hantera ditt ramschema.</p>
+  <p>
+    Tryck på<span></span><i class="fa-solid fa-trash"></i>-ikonen för att ta
+    bort en kurs från ditt ramschema.
+  </p>
   <p>Tryck på "Rensa schema" för att tömma hela ramschemat.</p>
 </article>
 
 <article class="article-desktop">
-  <p>Här kan du se och hantera ditt ramschema. <br> Tryck på knappen "Ta bort" för att ta bort en kurs från ditt ramschema, eller tryck på knappen "Rensa schema" för att tömma hela ramschemat.</p>
+  <p class="firstP">Här kan du se och hantera ditt ramschema.</p>
+  <p>
+    Tryck på knappen "Ta bort" för att ta bort en kurs från ditt ramschema,
+    eller tryck på knappen "Rensa schema" för att tömma hela ramschemat.
+  </p>
 </article>
-<div class="clearAllBtnContainer">
+
+<div class="btnContainer">
+  <button class="toCourses" routerLink="/courses">Alla kurser</button>
   <button class="clearAll" (click)="clearSchedule()">Rensa schema</button>
 </div>
 
@@ -38,7 +48,9 @@
           <td>{{ course.subject }}</td>
           <td><a [href]="course.syllabus">Kursplan</a></td>
           <td>
-            <button (click)="removeCourse(course.courseCode)">Ta bort</button>
+            <button class="remove" (click)="removeCourse(course.courseCode)">
+              Ta bort
+            </button>
           </td>
         </tr>
       </ng-template>
