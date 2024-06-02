@@ -20,7 +20,7 @@ Detta projekt är en webbplats för ett fiktivt universitet "Dalsjöns Universit
 - **Datahämtning:** JSON-data hämtas med HttpClient i ' services/courses.service.ts '.
 
 ### Komponenternas och services syfte och funktion:
-- **CoursesComponent** Visar tillgängliga kurser med sök-, filter- och sorteringsfunktioner. Använder **CoursesService** för att hämta kursdata och MyScheduleService för att hantera ramschemat.
+- **CoursesComponent** Visar tillgängliga kurser med sök-, filter- och sorteringsfunktioner. Använder **CoursesService** för att hämta kursdata och **MyScheduleService** för att hantera ramschemat.
 - **MyScheduleComponent** Visar och hanterar ramschemat. Använder **MyScheduleService** för att ladda, ta bort en eller rensa alla tillagda kurser i ramschemat med localStorage.
 
 ### Models /course.ts:
