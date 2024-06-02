@@ -105,10 +105,6 @@
   height: auto;
 }
 
-.info-box .info-content {
-  flex-grow: 1;
-}
-
 .info-box h2 {
   font-size: 1.5em;
   margin: 15px 0;
@@ -207,9 +203,9 @@
   }
 
   .info-box {
-    max-width: 400px;
+    max-width: 30%;
     min-height: 600px;
-    margin: 25px;
+    margin: 20px;
   }
 
   .info-box h2 {
