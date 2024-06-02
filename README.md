@@ -1,27 +1,71 @@
-# UniversityCourses
+# DT208G TypeScript, moment 5 - Projekt
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
+Detta projekt är en webbplats för ett fiktivt universitet "Dalsjöns Universitet", som är skapad som en del av kursen DT208G TypeScript vid Mittuniversitetet. Webbplatsen använder Angular, TypeScript och PrimeNG. På webbplatsen kan man se alla kurser från Mittuniversitetets kurskatalog 2023, söka, filtrera, sortera kurserna samt skapa ett eget ramschema. Kurser i ramschemat sparas i localStorage.
 
-## Development server
+## Användning
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Kurser-sidan
+- Visa alla tillgängliga kurser.
+- Använd sökfältet för att hitta kurser baserat på kurskod eller kursnamn.
+- Filtrera kurser med hjälp av ämneslistan.
+- Sortera kurserna i tabellen efter kurskod, kursnamn, poäng eller ämne.
+- Lägg till kurser i ett ramschema.
 
-## Code scaffolding
+### Mitt ramschema-sidan
+- Visa kurser som lagts till i ramschemat.
+- Ta bort enskilda kurser eller rensa hela schemat.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Konstruktion
+- **Komponenter:** Startsida, Kurser-sida, Mitt ramschema-sida, 404-sida, header, footer.
+- **Datahämtning:** JSON-data hämtas med HttpClient i ' services/courses.service.ts '.
 
-## Build
+### Komponenternas och services syfte och funktion:
+- **CoursesComponent** Visar tillgängliga kurser med sök-, filter- och sorteringsfunktioner. Använder **CoursesService** för att hämta kursdata och MyScheduleService för att hantera ramschemat.
+- **MyScheduleComponent** Visar och hanterar ramschemat. Använder **MyScheduleService** för att ladda, ta bort en eller rensa alla tillagda kurser i ramschemat med localStorage.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Models /course.ts:
+Interface som ger strukturen för ett kursobjekt ('courseCode', 'courseName', 'points', 'subject', 'syllabus').
 
-## Running unit tests
+## Styling
+Styling sker med CSS där varje komponent har egna stilregler, och globala stilregler finns i styles.css. <br> Webbplatsen är responsiv och fungerar på olika skärmstorlekar.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Utveckling
 
-## Running end-to-end tests
+Nedan finns en översättning och sammanfattning av den autogenererade readme-instruktionen som skapas när man skapar ett nytt Angularprojekt.
+Det är steg-för-steg instruktioner för hur man skapar ett Angularprojekt.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### 1. Installera Angular CLI globalt:
 
-## Further help
+`npm install -g @angular/cli`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### 2. Skapa ett nytt projekt :
+
+`ng new project-name`
+
+### 3. Starta utvecklingsservern:
+
+`ng serve --open` (öppnas i webbläsaren till `http://localhost:4200/`).
+
+### 4. Generera nya komponenter:
+
+`ng generate component component-name`
+
+Man kan också använda `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+### Bygg projektet:
+
+`ng build`
+
+### Kör enhetstester:
+
+`ng test`
+
+### Kör end-to-end-tester:
+
+`ng e2e`
+
+För att använda detta kommando, lägg först till ett paket som implementerar end-to-end testfunktionalitet.
+
+### Ytterligare hjälp
+
+För mer hjälp om Angular CLI, använd `ng help` eller besök [Angular CLI Overview and Command Reference](https://angular.io/cli).

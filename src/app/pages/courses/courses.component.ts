@@ -120,13 +120,13 @@ export class CoursesComponent implements OnInit {
     this.rows = event.rows;
   }
 
-  //Hantera sorteringsändring från dropdown
+  //Mobil: Hantera sorteringsändring från dropdown
   sortCourses(sortOption: string | null): void {
     this.selectedSortOption = sortOption;
     this.applySort(); //Använd den nya sorteringen
   }
 
-  //Applicera sorteringen baserat på valt sorteringsalternativ
+  //Mobil: Applicera sorteringen baserat på valt sorteringsalternativ
   applySort(): void {
     if (this.selectedSortOption === null || !this.selectedSortOption) {
       this.filteredCourses = this.filteredCourses.slice(); //Kopierar den aktuella filtreringen utan att påverka originaldatan
