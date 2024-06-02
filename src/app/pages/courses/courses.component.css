@@ -94,7 +94,7 @@ input[type="search"] {
 }
 
 :host ::ng-deep .p-dropdown-item {
-  padding: 10px 0 10px 10px;
+  padding-bottom: 10px;
 }
 
 .sort-form-mobile {
@@ -150,7 +150,7 @@ tr td button:hover {
   align-items: center;
   font-weight: 600;
   font-size: 1.2em;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .article-desktop {
@@ -168,7 +168,7 @@ tr td button:hover {
   margin-top: 10px;
   border-top: 1px solid rgba(204, 204, 204, 1);
   padding-top: 10px;
-  text-align: center;
+  /* text-align: center; */
 }
 
 td[colspan="6"] {
@@ -217,11 +217,11 @@ td[colspan="6"] {
     display: flex;
     align-items: center;
     gap: 30px;
-    justify-content: center;
+    /* justify-content: center; */
   }
 
   input[type="search"] {
-    width: 40%;
+    width: 35%;
     margin-bottom: 0;
     font-size: 18px;
   }

@@ -74,11 +74,11 @@ export class CoursesComponent implements OnInit {
         new Set(courses.map((course) => course.subject))
       );
 
-      this.subjectOptions = [{ label: 'Alla ämnen', value: '' }, ...this.subjects.map((subject) => ({  //Lägger till "Allaämnen" som ett återställningsval i dropdownen
+      this.subjectOptions = [{ label: 'Alla ämnen', value: '' }, ...this.subjects.map((subject) => ({  //Lägger till "Alla ämnen" som ett återställningsval i dropdownen
         label: subject,
         value: subject,
       }))];
-      this.selectedSubject = ''; // Se till att "Alla ämnen" är valt som standard
+      this.selectedSubject = ''; //Se till att "Alla ämnen" är valt som standard
 
       //Ladda tillagda kurser från MyScheduleService
       const addedCourses = this.myScheduleService.getCourses();

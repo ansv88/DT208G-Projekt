@@ -87,7 +87,7 @@
           <td>{{ course.courseName }}</td>
           <td>{{ course.points }}</td>
           <td>{{ course.subject }}</td>
-          <td><a [href]="course.syllabus">Kursplan</a></td>
+          <td><a [href]="course.syllabus" target="_blank">Kursplan</a></td>
           <td>
             <button
               (click)="addCourse(course)"
@@ -123,7 +123,7 @@
         <td colspan="6">
           <div class="course-header">
             <div class="course-name">{{ course.courseName }}</div>
-            <div class="course-points">{{ course.points }} poäng</div>
+            <div class="course-points">{{ course.points }} hp</div>
             <span (click)="addCourse(course)">
               <i *ngIf="isCourseAdded(course.courseCode)" class="fa fa-check"></i>
               <i *ngIf="!isCourseAdded(course.courseCode)" class="fa fa-plus"></i>

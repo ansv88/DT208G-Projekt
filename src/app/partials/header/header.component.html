@@ -11,7 +11,7 @@
                 <div class="bar"></div>
             </div>
             <ul class="nav-list">
-                <li><a routerLink="/home" routerLinkActive="current">Om universitetet</a></li>
+                <li><a routerLink="/home" routerLinkActive="current">Om oss</a></li>
                 <li><a routerLink="/courses" routerLinkActive="current">Kurser</a></li>
                 <li><a routerLink="/my-schedule" routerLinkActive="current">Mitt ramschema</a></li>
             </ul>
@@ -20,7 +20,7 @@
     <!-- Dropdown-menyn för mobilvy -->
     <nav class="mobile-menu" [class.show-menu]="menuActive">
         <ul>
-            <li><a routerLink="/home" routerLinkActive="current" (click)="toggleMenu()">Om universitetet</a></li>
+            <li><a routerLink="/home" routerLinkActive="current" (click)="toggleMenu()">Om oss</a></li>
             <li><a routerLink="/courses" routerLinkActive="current" (click)="toggleMenu()">Kurser</a></li>
             <li><a routerLink="/my-schedule" routerLinkActive="current" (click)="toggleMenu()">Mitt ramschema</a></li>
         </ul>
